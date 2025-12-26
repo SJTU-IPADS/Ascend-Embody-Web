@@ -1,0 +1,54 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#1f2937">
+    π₀ 模型在不同硬件平台上的准确度对比
+  </text>
+  
+  <!-- Y-axis -->
+  <line x1="100" y1="100" x2="100" y2="400" stroke="#6b7280" stroke-width="2"/>
+  
+  <!-- X-axis -->
+  <line x1="100" y1="400" x2="700" y2="400" stroke="#6b7280" stroke-width="2"/>
+  
+  <!-- Y-axis labels -->
+  <text x="80" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="end" fill="#6b7280">100%</text>
+  <text x="80" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="end" fill="#6b7280">95%</text>
+  <text x="80" y="245" font-family="Arial, sans-serif" font-size="14" text-anchor="end" fill="#6b7280">90%</text>
+  <text x="80" y="315" font-family="Arial, sans-serif" font-size="14" text-anchor="end" fill="#6b7280">85%</text>
+  <text x="80" y="385" font-family="Arial, sans-serif" font-size="14" text-anchor="end" fill="#6b7280">80%</text>
+  <text x="80" y="405" font-family="Arial, sans-serif" font-size="14" text-anchor="end" fill="#6b7280">75%</text>
+  
+  <!-- Grid lines -->
+  <line x1="100" y1="100" x2="700" y2="100" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="100" y1="170" x2="700" y2="170" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="100" y1="240" x2="700" y2="240" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="100" y1="310" x2="700" y2="310" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="100" y1="380" x2="700" y2="380" stroke="#e5e7eb" stroke-width="1"/>
+  
+  <!-- Bar 1: Ascend 310P - 93% -->
+  <rect x="200" y="149" width="120" height="251" fill="#2563eb" rx="4"/>
+  <text x="260" y="130" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#2563eb">93%</text>
+  <text x="260" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1f2937">Ascend 310P</text>
+  <text x="260" y="450" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6b7280">国产平台</text>
+  
+  <!-- Bar 2: RTX 4090 - 91% -->
+  <rect x="480" y="163" width="120" height="237" fill="#7c3aed" rx="4"/>
+  <text x="540" y="144" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#7c3aed">91%</text>
+  <text x="540" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1f2937">RTX 4090</text>
+  <text x="540" y="450" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6b7280">桌面级显卡</text>
+  
+  <!-- Legend -->
+  <rect x="280" y="470" width="20" height="15" fill="#2563eb" rx="2"/>
+  <text x="305" y="482" font-family="Arial, sans-serif" font-size="13" fill="#6b7280">昇腾 310P (边缘端)</text>
+  
+  <rect x="450" y="470" width="20" height="15" fill="#7c3aed" rx="2"/>
+  <text x="475" y="482" font-family="Arial, sans-serif" font-size="13" fill="#6b7280">RTX 4090 (桌面端)</text>
+  
+  <!-- Note -->
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#f59e0b" font-weight="600">
+    ✓ 昇腾 310P 以更低成本实现更高准确度
+  </text>
+</svg>
