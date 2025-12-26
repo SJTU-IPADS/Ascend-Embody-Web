@@ -54,7 +54,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    padding: 6rem 0 4rem;
+    padding: 12rem 0 4rem;
     position: relative;
     color: white;
     text-align: center;
@@ -94,44 +94,52 @@ body {
 }
 
 .main-title {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     line-height: 1.2;
     letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .subtitle-en {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    opacity: 0.95;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #fbbf24;
+    text-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
 }
 
 .subtitle {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 2rem;
-    max-width: 800px;
+    margin-bottom: 2.5rem;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.9;
+    color: #e0e7ff;
     line-height: 1.8;
 }
 
 .authors {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .institution {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #a5f3fc;
+    text-shadow: 0 2px 8px rgba(165, 243, 252, 0.3);
 }
 
 .institution-en {
-    font-size: 0.95rem;
-    opacity: 0.85;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #cbd5e1;
 }
 
 .resource-links {
@@ -1414,14 +1422,22 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .main-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .subtitle-en {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .institution {
+        font-size: 1.2rem;
+    }
+
+    .institution-en {
         font-size: 1rem;
     }
 
@@ -1430,7 +1446,7 @@ body {
     }
 
     .hero-section {
-        padding: 4rem 0 3rem;
+        padding: 8rem 0 3rem;
     }
 
     .section {
