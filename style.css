@@ -918,6 +918,10 @@ body {
     margin: 0 auto;
 }
 
+.comparison-charts-grid:has(.full-width) {
+    max-width: 1400px;
+}
+
 .comparison-chart-item {
     background: white;
     border-radius: 12px;
@@ -933,6 +937,17 @@ body {
 
 .comparison-chart-item.full-width {
     grid-column: 1 / -1;
+    max-width: 100%;
+}
+
+.comparison-chart-item.full-width .chart-image-wrapper {
+    max-width: 100%;
+}
+
+.comparison-chart-item.full-width .chart-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .comparison-chart-item h3 {
