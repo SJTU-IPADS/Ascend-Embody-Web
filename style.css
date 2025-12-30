@@ -931,6 +931,10 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+.comparison-chart-item.full-width {
+    grid-column: 1 / -1;
+}
+
 .comparison-chart-item h3 {
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
@@ -1413,6 +1417,19 @@ body {
     color: var(--text-primary);
     text-align: justify;
     text-indent: 2em;
+}
+
+.conclusion-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.conclusion-text a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+    opacity: 0.8;
 }
 
 /* Footer */
