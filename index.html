@@ -21,7 +21,7 @@
             </h1>
             <p class="subtitle-en">Embodied Intelligence Real-time Inference Engine based on Ascend</p>
             <p class="subtitle">
-                构建自主、可靠、高效的端侧具身智能底座，实现从"数字大脑"到"实体智能"的跨越
+                构建自主、可靠、高效的端侧具身智能系统底座
             </p>
 
             <div class="authors">
@@ -31,7 +31,6 @@
             </div>
 
             <div class="resource-links">
-                <a href="#" class="btn">论文/报告（孵化中）</a>
                 <a href="https://gitcode.com/cann/cann-recipes-embodied-intelligence" class="btn" target="_blank" rel="noopener noreferrer">代码库</a>
                 <a href="https://libero-project.github.io/main.html" class="btn" target="_blank" rel="noopener noreferrer">数据集</a>
             </div>
@@ -43,24 +42,24 @@
     <!-- Architecture Overview Section -->
     <section class="section architecture-section">
         <div class="container">
-            <h2 class="section-title">系统架构</h2>
-            <p class="section-subtitle">从模型到硬件的完整技术栈</p>
+            <h2 class="section-title">技术架构</h2>
+            <p class="section-subtitle">从算法到实机的完整技术栈</p>
 
             <div class="architecture-content">
                 <div class="architecture-diagram">
-                    <img src="./videos/架构图.png" alt="昇腾具身智能系统架构图">
+                    <img src="./videos/架构图.png" alt="昇腾具身智能技术架构图">
                 </div>
 
                 <div class="architecture-description">
                     <h3>技术架构概览</h3>
                     <p>
-                        本系统构建了一套完整的具身智能解决方案，从底层硬件到上层模型形成闭环。
+                        本系统构建了一套完整的具身智能解决方案，跨多个底层硬件，可承载多类机械臂和本体，向上支持多例具身智能模型。
                         基于<strong>昇腾 310P</strong> 边缘计算芯片，通过 <strong>CANN</strong> 深度学习框架和 <strong>ATC</strong> 模型转换工具链，
                         实现了多种视觉-语言-动作（VLA）模型的高效部署。
                     </p>
                     <p>
-                        系统支持从 PyTorch 动态图到昇腾静态图的自动转换，解决了 Transformer 和 Diffusion 模型在嵌入式平台上的部署难题。
-                        通过算子融合、内存优化和混合精度推理技术，在保证精度的同时实现了毫秒级推理延迟，
+                        系统支持从 PyTorch 动态图到昇腾静态图的自动转换，解决了 Autoregressive 和 Diffusion 模型在昇腾端侧平台上的部署难题。
+                        通过算子重排、内存优化和混合精度等技术，在保证精度的同时实现了毫秒级推理延迟，
                         为机器人实时控制提供了可靠的国产算力底座。
                     </p>
                     <div class="key-features">
@@ -89,8 +88,8 @@
     <!-- Hardware Comparison Section -->
     <section class="section comparison-video-section">
         <div class="container">
-            <h2 class="section-title">硬件平台横向对比</h2>
-            <p class="section-subtitle">Ascend 310P vs. NVIDIA Orin vs. RTX 4090 实测对比</p>
+            <h2 class="section-title">基于 π₀ 在 Jaka上 跨硬件推理性能横向对比</h2>
+            <p class="section-subtitle">昇腾 310P vs. NVIDIA Orin vs. RTX 4090 在Jaka上运行π₀的实测对比</p>
 
             <div class="comparison-video-content">
                 <!-- Main comparison video -->
@@ -98,26 +97,16 @@
                     <video controls autoplay loop muted playsinline>
                         <source src="/videos/不同硬件横向比较.mp4" type="video/mp4">
                     </video>
-                    <p class="video-description">实时执行时间对比：相同模型在不同硬件平台上的推理性能表现</p>
+                    <p class="video-description">相同模型、相同任务在不同硬件平台上的推理性能表现</p>
                 </div>
 
                 <!-- Data comparison charts -->
                 <div class="comparison-charts-grid">
                     <div class="comparison-chart-item">
-                        <h3>硬件性能对比</h3>
+                        <h3>综合性能与成本分析</h3>
                         <div class="chart-image-wrapper">
                             <img src="/data/硬件性能对比.png" alt="硬件性能对比">
                         </div>
-                        <p class="chart-note">功耗比与延迟表现对比</p>
-                    </div>
-
-
-                    <div class="comparison-chart-item">
-                        <h3>算力成本综合对比</h3>
-                        <div class="chart-image-wrapper">
-                            <img src="/data/算力成本综合对比.png" alt="算力成本综合对比">
-                        </div>
-                        <p class="chart-note">综合性能与成本分析</p>
                     </div>
                 </div>
             </div>
@@ -127,8 +116,8 @@
     <!-- Multi-angle Franka Demo Section -->
     <section class="section franka-demo-section">
         <div class="container">
-            <h2 class="section-title">Franka 机械臂多视角演示</h2>
-            <p class="section-subtitle">实时同步捕捉，展示精准操控能力</p>
+            <h2 class="section-title">基于 π₀.₅ 在 Franka 上机械臂多视角演示</h2>
+            <p class="section-subtitle">复杂长程任务执行，展示精准操控能力</p>
 
             <div class="franka-videos-grid">
                 <div class="franka-video-item">
@@ -162,22 +151,22 @@
 
             <!-- Performance Data Charts -->
             <div class="franka-data-section">
-                <h3 class="data-section-title">性能数据分析</h3>
+                <h3 class="data-section-title">不同算力下的模型精度（SR,%）对比</h3>
                 <div class="franka-charts-grid">
                     <div class="franka-chart-item">
-                        <h4>LIBERO 数据集表现</h4>
+                        <h4>π₀ 模型 Lerobot仿真测试成功率对比</h4>
                         <div class="chart-image-wrapper">
-                            <img src="/data/libero数据集表现.png" alt="LIBERO数据集表现对比">
+                            <img src="/data/pi0准确度对比.svg" alt="π₀模型任务成功率对比">
                         </div>
-                        <p class="chart-note">多任务基准测试成功率对比</p>
+                        <p class="chart-note">昇腾 310P 以FP16实现更高准确度，拒绝“擦边”可能</p>
                     </div>
 
                     <div class="franka-chart-item">
-                        <h4>π₀ 模型准确度对比</h4>
+                        <h4>π₀.₅ 模型 LIBERO 下成功率表现</h4>
                         <div class="chart-image-wrapper">
-                            <img src="/data/pi0准确度对比.svg" alt="π₀模型准确度对比">
+                            <img src="/data/libero数据集表现.png" alt="π₀.₅ LIBERO数据集成功率">
                         </div>
-                        <p class="chart-note">昇腾 310P 以更低成本实现更高准确度（93% vs 91%）</p>
+                        <p class="chart-note">多任务测试成功率，展现精细化能力</p>
                     </div>
                 </div>
             </div>
@@ -188,7 +177,7 @@
     <section class="section simulation-section">
         <div class="container">
             <h2 class="section-title">仿真环境演示</h2>
-            <p class="section-subtitle">Sim-to-Real 验证与多环境适配</p>
+            <p class="section-subtitle">跨多模型、多环境仿真任务适配</p>
 
             <!-- Carousel Container -->
             <div class="simulation-carousel">
@@ -273,20 +262,20 @@
     <!-- Exhibition Demos -->
     <section class="section exhibition-section">
         <div class="container">
-            <h2 class="section-title">现场演示</h2>
-            <p class="section-subtitle">真实场景下的能力展示</p>
+            <h2 class="section-title">真实场景下的能力展示</h2>
+            <p class="section-subtitle">WAIC参展</p>
 
             <div class="exhibition-videos">
                 <div class="exhibition-video-item">
                     <video autoplay loop muted playsinline controls>
                         <source src="/videos/参展.mp4" type="video/mp4">
                     </video>
-                    <p class="exhibition-caption">展会现场演示</p>
+                    <p class="exhibition-caption">青龙人形拍照机器人现场演示</p>
                 </div>
 
                 <div class="exhibition-video-item">
                     <img src="/videos/蓑衣黄瓜.GIF" alt="蓑衣黄瓜切割演示">
-                    <p class="exhibition-caption">精细操作：蓑衣黄瓜切割</p>
+                    <p class="exhibition-caption">网红大厨：蓑衣黄瓜切割</p>
                 </div>
             </div>
         </div>
@@ -308,7 +297,7 @@
                     </div>
                     <div class="deployment-description">
                         <h3>工业场景部署</h3>
-                        <p>基于昇腾 310P 的端侧推理方案已成功部署在真实工业环境中，实现车间气阀加工等复杂操作任务。系统在保证高精度的同时，展现出优异的稳定性和实时性。</p>
+                        <p>基于昇腾 310P 的端侧推理方案已成功部署在真实工业环境中，实现车间气阀加工等复杂操作任务。系统在保证高精度的同时，展现出媲美熟练工的优异稳定性和实时性。</p>
                         <div class="deployment-tags">
                             <span class="tag-item">工业部署</span>
                             <span class="tag-item">实时推理</span>
@@ -338,13 +327,14 @@
                             <div class="model-tags-list">
                                 <span class="model-tag">OpenVLA</span>
                                 <span class="model-tag">ACT</span>
+                                <span class="model-tag">RDT</span>
                                 <span class="model-tag">Diffusion Policy</span>
                                 <span class="model-tag katex-model">Pi0</span>
                                 <span class="model-tag katex-model">Pi0.5</span>
                                 <span class="model-tag">SmolVLA</span>
+                                <span class="model-tag">UniVLA</span>
                                 <span class="model-tag">G0</span>
                                 <span class="model-tag">OpenHelix</span>
-                                <span class="model-tag">RDT</span>
                                 <span class="model-tag">...</span>
                             </div>
                         </div>
@@ -384,7 +374,8 @@
             <div class="conclusion-box">
                 <div class="quote-icon">💡</div>
                 <p class="conclusion-text">
-                    占位符
+                    技术开发团队：
+                    论文孵化中
                 </p>
             </div>
         </div>
