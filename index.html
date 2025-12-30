@@ -22,7 +22,7 @@
             </h1>
             <p class="subtitle-en">Embodied Intelligence Real-time Inference Engine based on Ascend</p>
             <p class="subtitle">
-                构建自主、可靠、高效的端侧具身智能底座，实现从"数字大脑"到"实体智能"的跨越
+                构建自主、可靠、高效的端侧具身智能系统底座
             </p>
 
             <div class="authors">
@@ -32,7 +32,6 @@
             </div>
 
             <div class="resource-links">
-                <a href="#" class="btn">论文/报告（孵化中）</a>
                 <a href="https://gitcode.com/cann/cann-recipes-embodied-intelligence" class="btn" target="_blank" rel="noopener noreferrer">代码库</a>
                 <a href="https://libero-project.github.io/main.html" class="btn" target="_blank" rel="noopener noreferrer">数据集</a>
             </div>
@@ -44,24 +43,24 @@
     <!-- Architecture Overview Section -->
     <section class="section architecture-section">
         <div class="container">
-            <h2 class="section-title">系统架构</h2>
-            <p class="section-subtitle">从模型到硬件的完整技术栈</p>
+            <h2 class="section-title">技术架构</h2>
+            <p class="section-subtitle">从算法到实机的完整技术栈</p>
 
             <div class="architecture-content">
                 <div class="architecture-diagram">
-                    <img src="/Ascend-Embody-Web/assets/%E6%9E%B6%E6%9E%84%E5%9B%BE-DEXRZS8u.png" alt="昇腾具身智能系统架构图">
+                    <img src="/Ascend-Embody-Web/assets/%E6%9E%B6%E6%9E%84%E5%9B%BE-DEXRZS8u.png" alt="昇腾具身智能技术架构图">
                 </div>
 
                 <div class="architecture-description">
                     <h3>技术架构概览</h3>
                     <p>
-                        本系统构建了一套完整的具身智能解决方案，从底层硬件到上层模型形成闭环。
+                        本系统构建了一套完整的具身智能解决方案，跨多个底层硬件，可承载多类机械臂和本体，向上支持多例具身智能模型。
                         基于<strong>昇腾 310P</strong> 边缘计算芯片，通过 <strong>CANN</strong> 深度学习框架和 <strong>ATC</strong> 模型转换工具链，
                         实现了多种视觉-语言-动作（VLA）模型的高效部署。
                     </p>
                     <p>
-                        系统支持从 PyTorch 动态图到昇腾静态图的自动转换，解决了 Transformer 和 Diffusion 模型在嵌入式平台上的部署难题。
-                        通过算子融合、内存优化和混合精度推理技术，在保证精度的同时实现了毫秒级推理延迟，
+                        系统支持从 PyTorch 动态图到昇腾静态图的自动转换，解决了 Autoregressive 和 Diffusion 模型在昇腾端侧平台上的部署难题。
+                        通过算子重排、内存优化和混合精度等技术，在保证精度的同时实现了毫秒级推理延迟，
                         为机器人实时控制提供了可靠的国产算力底座。
                     </p>
                     <div class="key-features">
@@ -90,8 +89,8 @@
     <!-- Hardware Comparison Section -->
     <section class="section comparison-video-section">
         <div class="container">
-            <h2 class="section-title">硬件平台横向对比</h2>
-            <p class="section-subtitle">Ascend 310P vs. NVIDIA Orin vs. RTX 4090 实测对比</p>
+            <h2 class="section-title">基于 π₀ 在 Jaka上 跨硬件推理性能横向对比</h2>
+            <p class="section-subtitle">昇腾 310P vs. NVIDIA Orin vs. RTX 4090 在Jaka上运行π₀的实测对比</p>
 
             <div class="comparison-video-content">
                 <!-- Main comparison video -->
@@ -99,26 +98,16 @@
                     <video controls autoplay loop muted playsinline>
                         <source src="/Ascend-Embody-Web/assets/%E4%B8%8D%E5%90%8C%E7%A1%AC%E4%BB%B6%E6%A8%AA%E5%90%91%E6%AF%94%E8%BE%83-CvAx1xOr.mp4" type="video/mp4">
                     </video>
-                    <p class="video-description">实时执行时间对比：相同模型在不同硬件平台上的推理性能表现</p>
+                    <p class="video-description">相同模型、相同任务在不同硬件平台上的推理性能表现</p>
                 </div>
 
                 <!-- Data comparison charts -->
                 <div class="comparison-charts-grid">
                     <div class="comparison-chart-item">
-                        <h3>硬件性能对比</h3>
+                        <h3>综合性能与成本分析</h3>
                         <div class="chart-image-wrapper">
                             <img src="/Ascend-Embody-Web/assets/%E7%A1%AC%E4%BB%B6%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94-qVGYw40E.png" alt="硬件性能对比">
                         </div>
-                        <p class="chart-note">功耗比与延迟表现对比</p>
-                    </div>
-
-
-                    <div class="comparison-chart-item">
-                        <h3>算力成本综合对比</h3>
-                        <div class="chart-image-wrapper">
-                            <img src="/Ascend-Embody-Web/assets/%E7%AE%97%E5%8A%9B%E6%88%90%E6%9C%AC%E7%BB%BC%E5%90%88%E5%AF%B9%E6%AF%94-CE86RYBB.png" alt="算力成本综合对比">
-                        </div>
-                        <p class="chart-note">综合性能与成本分析</p>
                     </div>
                 </div>
             </div>
@@ -128,8 +117,8 @@
     <!-- Multi-angle Franka Demo Section -->
     <section class="section franka-demo-section">
         <div class="container">
-            <h2 class="section-title">Franka 机械臂多视角演示</h2>
-            <p class="section-subtitle">实时同步捕捉，展示精准操控能力</p>
+            <h2 class="section-title">基于 π₀.₅ 在 Franka 上机械臂多视角演示</h2>
+            <p class="section-subtitle">复杂长程任务执行，展示精准操控能力</p>
 
             <div class="franka-videos-grid">
                 <div class="franka-video-item">
@@ -163,22 +152,22 @@
 
             <!-- Performance Data Charts -->
             <div class="franka-data-section">
-                <h3 class="data-section-title">性能数据分析</h3>
+                <h3 class="data-section-title">不同算力下的模型精度（SR,%）对比</h3>
                 <div class="franka-charts-grid">
                     <div class="franka-chart-item">
-                        <h4>LIBERO 数据集表现</h4>
+                        <h4>π₀ 模型 Lerobot仿真测试成功率对比</h4>
                         <div class="chart-image-wrapper">
-                            <img src="/Ascend-Embody-Web/assets/libero%E6%95%B0%E6%8D%AE%E9%9B%86%E8%A1%A8%E7%8E%B0-DuZXwJPQ.png" alt="LIBERO数据集表现对比">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIEJhY2tncm91bmQgLS0+CiAgPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiNmZmZmZmYiLz4KICAKICA8IS0tIFRpdGxlIC0tPgogIDx0ZXh0IHg9IjQwMCIgeT0iNDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxZjI5MzciPgogICAgz4DigoAg5qih5Z6L5Zyo5LiN5ZCM56Gs5Lu25bmz5Y+w5LiK55qE5YeG56Gu5bqm5a+55q+UCiAgPC90ZXh0PgogIAogIDwhLS0gWS1heGlzIC0tPgogIDxsaW5lIHgxPSIxMDAiIHkxPSIxMDAiIHgyPSIxMDAiIHkyPSI0MDAiIHN0cm9rZT0iIzZiNzI4MCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgCiAgPCEtLSBYLWF4aXMgLS0+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjQwMCIgeDI9IjcwMCIgeTI9IjQwMCIgc3Ryb2tlPSIjNmI3MjgwIiBzdHJva2Utd2lkdGg9IjIiLz4KICAKICA8IS0tIFktYXhpcyBsYWJlbHMgLS0+CiAgPHRleHQgeD0iODAiIHk9IjEwNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0iZW5kIiBmaWxsPSIjNmI3MjgwIj4xMDAlPC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSIxNzUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iIzZiNzI4MCI+OTUlPC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSIyNDUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iIzZiNzI4MCI+OTAlPC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSIzMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iIzZiNzI4MCI+ODUlPC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSIzODUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iIzZiNzI4MCI+ODAlPC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSI0MDUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iIzZiNzI4MCI+NzUlPC90ZXh0PgogIAogIDwhLS0gR3JpZCBsaW5lcyAtLT4KICA8bGluZSB4MT0iMTAwIiB5MT0iMTAwIiB4Mj0iNzAwIiB5Mj0iMTAwIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSIxMDAiIHkxPSIxNzAiIHgyPSI3MDAiIHkyPSIxNzAiIHN0cm9rZT0iI2U1ZTdlYiIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjI0MCIgeDI9IjcwMCIgeTI9IjI0MCIgc3Ryb2tlPSIjZTVlN2ViIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8bGluZSB4MT0iMTAwIiB5MT0iMzEwIiB4Mj0iNzAwIiB5Mj0iMzEwIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSIxMDAiIHkxPSIzODAiIHgyPSI3MDAiIHkyPSIzODAiIHN0cm9rZT0iI2U1ZTdlYiIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgCiAgPCEtLSBCYXIgMTogQXNjZW5kIDMxMFAgLSA5MyUgLS0+CiAgPHJlY3QgeD0iMjAwIiB5PSIxNDkiIHdpZHRoPSIxMjAiIGhlaWdodD0iMjUxIiBmaWxsPSIjMjU2M2ViIiByeD0iNCIvPgogIDx0ZXh0IHg9IjI2MCIgeT0iMTMwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMjU2M2ViIj45MyU8L3RleHQ+CiAgPHRleHQgeD0iMjYwIiB5PSI0MzAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxZjI5MzciPkFzY2VuZCAzMTBQPC90ZXh0PgogIDx0ZXh0IHg9IjI2MCIgeT0iNDUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM2YjcyODAiPuWbveS6p+W5s+WPsDwvdGV4dD4KICAKICA8IS0tIEJhciAyOiBSVFggNDA5MCAtIDkxJSAtLT4KICA8cmVjdCB4PSI0ODAiIHk9IjE2MyIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyMzciIGZpbGw9IiM3YzNhZWQiIHJ4PSI0Ii8+CiAgPHRleHQgeD0iNTQwIiB5PSIxNDQiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9ImJvbGQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3YzNhZWQiPjkxJTwvdGV4dD4KICA8dGV4dCB4PSI1NDAiIHk9IjQzMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iYm9sZCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzFmMjkzNyI+UlRYIDQwOTA8L3RleHQ+CiAgPHRleHQgeD0iNTQwIiB5PSI0NTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCI+5qGM6Z2i57qn5pi+5Y2hPC90ZXh0PgogIAogIDwhLS0gTGVnZW5kIC0tPgogIDxyZWN0IHg9IjI4MCIgeT0iNDcwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIGZpbGw9IiMyNTYzZWIiIHJ4PSIyIi8+CiAgPHRleHQgeD0iMzA1IiB5PSI0ODIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgZmlsbD0iIzZiNzI4MCI+5piH6IW+IDMxMFAgKOi+uee8mOerryk8L3RleHQ+CiAgCiAgPHJlY3QgeD0iNDUwIiB5PSI0NzAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNSIgZmlsbD0iIzdjM2FlZCIgcng9IjIiLz4KICA8dGV4dCB4PSI0NzUiIHk9IjQ4MiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmaWxsPSIjNmI3MjgwIj5SVFggNDA5MCAo5qGM6Z2i56uvKTwvdGV4dD4KICAKICA8IS0tIE5vdGUgLS0+CiAgPHRleHQgeD0iNDAwIiB5PSI3NSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZjU5ZTBiIiBmb250LXdlaWdodD0iNjAwIj4KICAgIOKckyDmmIfohb4gMzEwUCDku6Xmm7TkvY7miJDmnKzlrp7njrDmm7Tpq5jlh4bnoa7luqYKICA8L3RleHQ+Cjwvc3ZnPgo=" alt="π₀模型任务成功率对比">
                         </div>
-                        <p class="chart-note">多任务基准测试成功率对比</p>
+                        <p class="chart-note">昇腾 310P 以FP16实现更高准确度，拒绝“擦边”可能</p>
                     </div>
 
                     <div class="franka-chart-item">
-                        <h4>π₀ 模型准确度对比</h4>
+                        <h4>π₀.₅ 模型 LIBERO 下成功率表现</h4>
                         <div class="chart-image-wrapper">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIEJhY2tncm91bmQgLS0+CiAgPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiNmZmZmZmYiLz4KICAKICA8IS0tIFRpdGxlIC0tPgogIDx0ZXh0IHg9IjQwMCIgeT0iNDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxZjI5MzciPgogICAgz4DigoAg5qih5Z6L5Zyo5LiN5ZCM56Gs5Lu25bmz5Y+w5LiK55qE5YeG56Gu5bqm5a+55q+UCiAgPC90ZXh0PgogIAogIDwhLS0gWS1heGlzIC0tPgogIDxsaW5lIHgxPSIxMDAiIHkxPSIxMDAiIHgyPSIxMDAiIHkyPSI0MDAiIHN0cm9rZT0iIzZiNzI4MCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgCiAgPCEtLSBYLWF4aXMgLS0+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjQwMCIgeDI9IjcwMCIgeTI9IjQwMCIgc3Ryb2tlPSIjNmI3MjgwIiBzdHJva2Utd2lkdGg9IjIiLz4KICAKICA8IS0tIFktYXhpcyBsYWJlbHMgLS0+CiAgPHRleHQgeD0iODAiIHk9IjEwNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0iZW5kIiBmaWxsPSIjNmI3MjgwIj4xMDAlPC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSIxNzUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iIzZiNzI4MCI+OTUlPC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSIyNDUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iIzZiNzI4MCI+OTAlPC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSIzMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iIzZiNzI4MCI+ODUlPC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSIzODUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iIzZiNzI4MCI+ODAlPC90ZXh0PgogIDx0ZXh0IHg9IjgwIiB5PSI0MDUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iIzZiNzI4MCI+NzUlPC90ZXh0PgogIAogIDwhLS0gR3JpZCBsaW5lcyAtLT4KICA8bGluZSB4MT0iMTAwIiB5MT0iMTAwIiB4Mj0iNzAwIiB5Mj0iMTAwIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSIxMDAiIHkxPSIxNzAiIHgyPSI3MDAiIHkyPSIxNzAiIHN0cm9rZT0iI2U1ZTdlYiIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjI0MCIgeDI9IjcwMCIgeTI9IjI0MCIgc3Ryb2tlPSIjZTVlN2ViIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8bGluZSB4MT0iMTAwIiB5MT0iMzEwIiB4Mj0iNzAwIiB5Mj0iMzEwIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSIxMDAiIHkxPSIzODAiIHgyPSI3MDAiIHkyPSIzODAiIHN0cm9rZT0iI2U1ZTdlYiIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgCiAgPCEtLSBCYXIgMTogQXNjZW5kIDMxMFAgLSA5MyUgLS0+CiAgPHJlY3QgeD0iMjAwIiB5PSIxNDkiIHdpZHRoPSIxMjAiIGhlaWdodD0iMjUxIiBmaWxsPSIjMjU2M2ViIiByeD0iNCIvPgogIDx0ZXh0IHg9IjI2MCIgeT0iMTMwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMjU2M2ViIj45MyU8L3RleHQ+CiAgPHRleHQgeD0iMjYwIiB5PSI0MzAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxZjI5MzciPkFzY2VuZCAzMTBQPC90ZXh0PgogIDx0ZXh0IHg9IjI2MCIgeT0iNDUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM2YjcyODAiPuWbveS6p+W5s+WPsDwvdGV4dD4KICAKICA8IS0tIEJhciAyOiBSVFggNDA5MCAtIDkxJSAtLT4KICA8cmVjdCB4PSI0ODAiIHk9IjE2MyIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyMzciIGZpbGw9IiM3YzNhZWQiIHJ4PSI0Ii8+CiAgPHRleHQgeD0iNTQwIiB5PSIxNDQiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9ImJvbGQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3YzNhZWQiPjkxJTwvdGV4dD4KICA8dGV4dCB4PSI1NDAiIHk9IjQzMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iYm9sZCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzFmMjkzNyI+UlRYIDQwOTA8L3RleHQ+CiAgPHRleHQgeD0iNTQwIiB5PSI0NTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCI+5qGM6Z2i57qn5pi+5Y2hPC90ZXh0PgogIAogIDwhLS0gTGVnZW5kIC0tPgogIDxyZWN0IHg9IjI4MCIgeT0iNDcwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIGZpbGw9IiMyNTYzZWIiIHJ4PSIyIi8+CiAgPHRleHQgeD0iMzA1IiB5PSI0ODIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgZmlsbD0iIzZiNzI4MCI+5piH6IW+IDMxMFAgKOi+uee8mOerryk8L3RleHQ+CiAgCiAgPHJlY3QgeD0iNDUwIiB5PSI0NzAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNSIgZmlsbD0iIzdjM2FlZCIgcng9IjIiLz4KICA8dGV4dCB4PSI0NzUiIHk9IjQ4MiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmaWxsPSIjNmI3MjgwIj5SVFggNDA5MCAo5qGM6Z2i56uvKTwvdGV4dD4KICAKICA8IS0tIE5vdGUgLS0+CiAgPHRleHQgeD0iNDAwIiB5PSI3NSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZjU5ZTBiIiBmb250LXdlaWdodD0iNjAwIj4KICAgIOKckyDmmIfohb4gMzEwUCDku6Xmm7TkvY7miJDmnKzlrp7njrDmm7Tpq5jlh4bnoa7luqYKICA8L3RleHQ+Cjwvc3ZnPgo=" alt="π₀模型准确度对比">
+                            <img src="/Ascend-Embody-Web/assets/libero%E6%95%B0%E6%8D%AE%E9%9B%86%E8%A1%A8%E7%8E%B0-DuZXwJPQ.png" alt="π₀.₅ LIBERO数据集成功率">
                         </div>
-                        <p class="chart-note">昇腾 310P 以更低成本实现更高准确度（93% vs 91%）</p>
+                        <p class="chart-note">多任务测试成功率，展现精细化能力</p>
                     </div>
                 </div>
             </div>
@@ -189,7 +178,7 @@
     <section class="section simulation-section">
         <div class="container">
             <h2 class="section-title">仿真环境演示</h2>
-            <p class="section-subtitle">Sim-to-Real 验证与多环境适配</p>
+            <p class="section-subtitle">跨多模型、多环境仿真任务适配</p>
 
             <!-- Carousel Container -->
             <div class="simulation-carousel">
@@ -274,20 +263,20 @@
     <!-- Exhibition Demos -->
     <section class="section exhibition-section">
         <div class="container">
-            <h2 class="section-title">现场演示</h2>
-            <p class="section-subtitle">真实场景下的能力展示</p>
+            <h2 class="section-title">真实场景下的能力展示</h2>
+            <p class="section-subtitle">WAIC参展</p>
 
             <div class="exhibition-videos">
                 <div class="exhibition-video-item">
                     <video autoplay loop muted playsinline controls>
                         <source src="/Ascend-Embody-Web/assets/%E5%8F%82%E5%B1%95-vfhFHWm8.mp4" type="video/mp4">
                     </video>
-                    <p class="exhibition-caption">展会现场演示</p>
+                    <p class="exhibition-caption">青龙人形拍照机器人现场演示</p>
                 </div>
 
                 <div class="exhibition-video-item">
                     <img src="/Ascend-Embody-Web/assets/%E8%93%91%E8%A1%A3%E9%BB%84%E7%93%9C-BHOYf6KV.GIF" alt="蓑衣黄瓜切割演示">
-                    <p class="exhibition-caption">精细操作：蓑衣黄瓜切割</p>
+                    <p class="exhibition-caption">网红大厨：蓑衣黄瓜切割</p>
                 </div>
             </div>
         </div>
@@ -309,7 +298,7 @@
                     </div>
                     <div class="deployment-description">
                         <h3>工业场景部署</h3>
-                        <p>基于昇腾 310P 的端侧推理方案已成功部署在真实工业环境中，实现车间气阀加工等复杂操作任务。系统在保证高精度的同时，展现出优异的稳定性和实时性。</p>
+                        <p>基于昇腾 310P 的端侧推理方案已成功部署在真实工业环境中，实现车间气阀加工等复杂操作任务。系统在保证高精度的同时，展现出媲美熟练工的优异稳定性和实时性。</p>
                         <div class="deployment-tags">
                             <span class="tag-item">工业部署</span>
                             <span class="tag-item">实时推理</span>
@@ -339,13 +328,14 @@
                             <div class="model-tags-list">
                                 <span class="model-tag">OpenVLA</span>
                                 <span class="model-tag">ACT</span>
+                                <span class="model-tag">RDT</span>
                                 <span class="model-tag">Diffusion Policy</span>
                                 <span class="model-tag katex-model">Pi0</span>
                                 <span class="model-tag katex-model">Pi0.5</span>
                                 <span class="model-tag">SmolVLA</span>
+                                <span class="model-tag">UniVLA</span>
                                 <span class="model-tag">G0</span>
                                 <span class="model-tag">OpenHelix</span>
-                                <span class="model-tag">RDT</span>
                                 <span class="model-tag">...</span>
                             </div>
                         </div>
@@ -385,7 +375,8 @@
             <div class="conclusion-box">
                 <div class="quote-icon">💡</div>
                 <p class="conclusion-text">
-                    占位符
+                    技术开发团队：
+                    论文孵化中
                 </p>
             </div>
         </div>
